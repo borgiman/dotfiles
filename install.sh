@@ -15,6 +15,10 @@ sleep 1
 git config --global user.name "Patrick Borgogno"
 git config --global user.email "789401+borgiman@users.noreply.github.com"
 
+echo '*** Install GitHub CLI'
+sleep 1
+brew install gh
+
 echo '*** Generate SSH key for GitHub'
 sleep 1
 if [ ! -f ~/.ssh/id_ed25519_github ]; then
