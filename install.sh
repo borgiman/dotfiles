@@ -41,6 +41,10 @@ if [ ! -f ~/.ssh/id_ed25519_github ]; then
     read
 fi
 
+echo '*** Install Microsoft Teams'
+sleep 1
+brew install --cask microsoft-teams
+
 echo '*** Enable dark mode'
 sleep 1
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
