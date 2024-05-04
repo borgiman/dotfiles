@@ -45,6 +45,10 @@ echo '*** Install Microsoft Teams'
 sleep 1
 brew install --cask microsoft-teams
 
+echo '*** Install Google Chrome'
+sleep 1
+brew install --cask google-chrome
+
 echo '*** Enable dark mode'
 sleep 1
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
