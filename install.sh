@@ -57,3 +57,10 @@ echo '*** Set click force to light'
 sleep 1
 defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
 defaults write com.apple.AppleMultitouchTrackpad SecondClickThreshold -int 0
+
+echo '*** Set max charge capacity to 80%'
+sleep 1
+brew tap zackelia/formulae
+brew install bclm
+sudo bclm write 80
+sudo bclm persist
