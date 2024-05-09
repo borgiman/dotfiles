@@ -10,6 +10,13 @@ echo '*** Install Git'
 sleep 1
 brew install git
 
+echo '*** Cloning dotfiles repository'
+sleep 1
+[ ! -d ~/git ] && mkdir ~/git
+cd ~/git
+git clone git@github.com:borgiman/dotfiles.git
+cd dotfiles
+
 echo '*** Set Git config'
 sleep 1
 git config --global user.name "Patrick Borgogno"
