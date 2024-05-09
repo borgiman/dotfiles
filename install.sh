@@ -28,7 +28,7 @@ if [ ! -f ~/.ssh/id_ed25519_github ]; then
     eval "$(ssh-agent -s)"
     echo 'eval "$(ssh-agent -s)"' >> ~/.zshrc
     [ ! -f ~/.ssh/config ] && touch ~/.ssh/config
-    if [ ! grep -q "github.com" ~/.ssh/config ]; then
+    if ! grep -q "github.com" ~/.ssh/config; then
         echo 'Host github.com' >> ~/.ssh/config
         echo '    AddKeysToAgent yes' >> ~/.ssh/config
         echo '    UseKeychain yes' >> ~/.ssh/config
@@ -36,9 +36,8 @@ if [ ! -f ~/.ssh/id_ed25519_github ]; then
     fi
     echo '---> SSH passphrase' $ssh_passphrase
     echo $ssh_passphrase | ssh-add --apple-use-keychain ~/.ssh/id_ed25519_github
-    cat ~/.ssh/id_ed25519_github.pub
-    echo '---> Copy the public key from the last line and add it to the ssh keys on github.com. Press Enter when finished'
-    read
+    gh auth login --git-protocol ssh --hostname github.com --skip-ssh-key --web --scopes "admin:public_key"
+    gh ssh-key add ~/.ssh/id_ed25519_github.pub --title "MacBook"
 fi
 
 echo '*** Install Microsoft Teams'
