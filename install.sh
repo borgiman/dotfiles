@@ -19,8 +19,7 @@ cd dotfiles
 
 echo '*** Set Git config'
 sleep 1
-git config --global user.name "Patrick Borgogno"
-git config --global user.email "789401+borgiman@users.noreply.github.com"
+ln -s -f ~/git/dotfiles/git/.gitconfig ~/.gitconfig
 
 echo '*** Install GitHub CLI'
 sleep 1
