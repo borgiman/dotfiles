@@ -9,13 +9,14 @@ source ~/.zprofile
 echo '*** Install Git'
 sleep 1
 brew install git
+brew install git-lfs
+git lfs install
 
 echo '*** Cloning dotfiles repository'
 sleep 1
 [ ! -d ~/git ] && mkdir ~/git
 cd ~/git
-git clone git@github.com:borgiman/dotfiles.git
-cd dotfiles
+[ ! -d dotfiles ] && git clone git@github.com:borgiman/dotfiles.git
 
 echo '*** Set Git config'
 sleep 1

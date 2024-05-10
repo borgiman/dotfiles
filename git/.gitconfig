@@ -1,3 +1,29 @@
+[core]
+	autocrlf = false
+[diff]
+	algorithm = histogram
+	submodule = log
+[fetch]
+	prune = true
+[help]
+	autocorrect = prompt
+[init]
+	defaultBranch = main
+[merge]
+	conflictStyle = zdiff3
+[pull]
+	ff = only
+[rerere]
+	enabled = true
+[status]
+	submoduleSummary = true
+[submodule]
+	recurse = true
 [user]
 	name = Patrick Borgogno
 	email = 789401+borgiman@users.noreply.github.com
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
