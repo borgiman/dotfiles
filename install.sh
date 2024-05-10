@@ -6,6 +6,14 @@ sleep 1
 (echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') > ~/.zprofile
 source ~/.zprofile
 
+echo '*** Install App Store CLI'
+sleep 1
+brew install mas
+
+echo '*** Update App Store packages'
+sleep 1
+mas upgrade
+
 echo '*** Install Git'
 sleep 1
 brew install git
