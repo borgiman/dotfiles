@@ -64,6 +64,13 @@ echo '*** Install Microsoft Teams'
 sleep 1
 brew install --cask microsoft-teams
 
+echo '*** Install Office'
+sleep 1
+brew install --cask microsoft-word
+brew install --cask microsoft-excel
+brew install --cask microsoft-powerpoint
+brew install --cask microsoft-outlook
+
 echo '*** Install Google Chrome'
 sleep 1
 brew install --cask google-chrome
@@ -116,6 +123,7 @@ sudo bclm persist
 echo '*** Configure dock'
 sleep 1
 defaults write com.apple.dock persistent-apps -array
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Microsoft Outlook.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Microsoft Teams (work or school).app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/System/Applications/Utilities/Terminal.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
@@ -123,5 +131,6 @@ killall Dock
 
 echo '*** Finished, do these steps now manually'
 echo '-> Log in to Microsoft Teams'
+echo '-> Log in to Microsoft Outlook'
 echo '-> Log in to Google Chrome'
-echo '-> Start Docker Desktop and set resources to 4 cpus and 6 GB'
+echo '-> Start Docker Desktop and set resources to 4 CPUs and 6 GB'
