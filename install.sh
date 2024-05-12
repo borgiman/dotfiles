@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo '*** Manual pre steps, press ENTER after completion'
+echo '-> Open MacStore once and log in if asked to'
+echo '-> Move iMovie and GarageBand to trash' # mas uninstall does not work
+read
+
 echo '*** Install Homebrew'
 sleep 1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
