@@ -68,6 +68,10 @@ echo '*** Install Google Chrome'
 sleep 1
 brew install --cask google-chrome
 
+echo '*** Install Docker'
+sleep 1
+brew install --cask docker
+
 echo '*** Enable dark mode'
 sleep 1
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
@@ -103,3 +107,4 @@ killall Dock
 echo '*** Finished, do these steps now manually'
 echo '-> Log in to Microsoft Teams'
 echo '-> Log in to Google Chrome'
+echo '-> Start Docker Desktop and set resources to 4 cpus and 6 GB'
