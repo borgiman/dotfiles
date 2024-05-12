@@ -72,6 +72,23 @@ echo '*** Install Docker'
 sleep 1
 brew install --cask docker
 
+echo '*** Install Node'
+sleep 1
+brew install node
+
+echo '*** Install wget'
+sleep 1
+brew install wget
+
+echo '*** Install htop'
+sleep 1
+brew install htop
+
+echo '*** Install dotnet'
+sleep 1
+brew install --cask dotnet-sdk
+dotnet dev-certs https --trust
+
 echo '*** Enable dark mode'
 sleep 1
 osascript -e 'tell app "System Events" to tell appearance preferences to set dark mode to true'
