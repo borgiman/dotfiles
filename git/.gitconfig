@@ -3,6 +3,7 @@
 [diff]
 	algorithm = histogram
 	submodule = log
+	wsErrorHighlight = all
 [fetch]
 	prune = true
 [filter "lfs"]
